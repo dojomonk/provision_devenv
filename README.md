@@ -2,49 +2,6 @@ Tips and tricks before moving forward
 -
 * When you see [working_path]; I work in a git repo where the Vagrantfile resides; this path is also where the Vagrant VM mounts /vagrant as a share.  I do all my work from /vagrant and this greatly simplifies getting code in and out much faster via GIT, but the choice is up to you.
 
-Operating system isolation with VAGRANT / (Docker in future)
----------------
-##### * Skip to next section if not interested in OS isolation
- 
-#####Requirements - tested on following versions
-install virtualbox 4.3.14 ( http://download.virtualbox.org/virtualbox/ )
-
-install vagrant 1.6.3 (https://www.vagrantup.com)
-
-After installing vagrant install vagrant-vbguest
-
-    vagrant plugin install vagrant-vbguest
-
-If you already have box skip adding same box
-
-    vagrant box add https://atlas.hashicorp.com/bento/boxes/centos-6.7
-
-else    
-
-    cd [working_path]
-    git clone https://github.com/legoblocks/py_ruby_isoenv_scripts.git 
-    mv py_ruby_isoenv_scripts provision; rm -rf provision/.git; cp provision/Vagrantfile .
-    
-#####File you may want to edit prior to running vagrant up (to build enviroment)
-
-* Vagrantfile - common settings for building and setting host values
-
-VagrantFile configs | Default settings| notes
-------------|--------|----------
-config.vm.box = | bento/centos-6.7 | edit for your Vagrant Box
-config-vm.provision | :shell, :path => "provision/provision.sh" | edit for your provisioning needs
-config.vm.hostname = | "defaultname" | hostname set on Vagrant server
-config.vm.network | "private_network", ip: "10.0.0.10" | by default commented out
-
-*  provision/dev_env_postsetup.sh - installs rbenv/pyenv versions
-
-language | default versions | notes
-------------|--------|----------
-ruby | 2.1.2 | to change, edit line 'for rbenv_ver in 2.1.2; do'
-python | 2.6.6 & 2.7.10 | to change, edit line 'for pyenv_ver in 2.6.6 2.7.10; do'
-
-    cd [working_path]
-    vagrant up
 
 Language isolation
 -
