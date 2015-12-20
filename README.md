@@ -23,8 +23,8 @@ Language isolation
 
 #####Setup dev Enviroment 
 
-    git clone https://github.com/legoblocks/py_ruby_isoenv_scripts
-    cd py_ruby_isoenv_scripts
+    git clone https://github.com/legoblocks/provision_devenv.git
+    cd [clone_repo]
     ./dev_env_setup.sh
     source .bash_profile
 
