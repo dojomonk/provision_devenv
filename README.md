@@ -25,6 +25,15 @@ Language isolation
 
     git clone https://github.com/legoblocks/provision_devenv.git
     cd [clone_repo]
+
+*  edit dev_env_postsetup.sh to change, add versions
+
+language | default versions | notes
+------------|--------|----------
+ruby | 2.1.2 | to change, edit line 'for rbenv_ver in 2.1.2; do'
+python | 2.6.6 & 2.7.10 | to change, edit line 'for pyenv_ver in 2.6.6 2.7.10; do'
+
+
     ./dev_env_setup.sh
     source .bash_profile
 
