@@ -35,6 +35,7 @@ python | 2.6.6 & 2.7.10 | to change, edit line 'for pyenv_ver in 2.6.6 2.7.10; d
 
 
     ./dev_env_setup.sh
+    ./dev_env_postsetup.sh
     source .bash_profile
 
 ##### OR Manually install your language versions 
