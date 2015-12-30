@@ -37,7 +37,7 @@ python | 2.6.6 & 2.7.10 | to change, edit line 'for pyenv_ver in 2.6.6 2.7.10; d
     ./dev_env_setup.sh
     source .bash_profile
 
-#####Install your language versions 
+##### OR Manually install your language versions 
 
     rbenv install x.x.x || version --list (by default installs to ~/.rbenv/versions)
     pyenv install x.x.x || version --list (by default installs to ~/.pyenv/versions)
