@@ -36,7 +36,7 @@ python | 2.6.6 & 2.7.10 | to change, edit line 'for pyenv_ver in 2.6.6 2.7.10; d
 
     ./dev_env_setup.sh
     ./dev_env_postsetup.sh
-    source .bash_profile
+    source ~/.bash_profile
 
 ##### OR Manually install your language versions 
 
@@ -68,7 +68,7 @@ Package management
 
 Install same bundler version across all env
 
-    gem install bundler -v 1.10.6
+    sudo gem install bundler -v 1.10.6
 
 You can install gems from a given Gemfile
     
