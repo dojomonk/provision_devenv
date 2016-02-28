@@ -26,7 +26,7 @@ py_env () {
 	for pyenv_ver in 2.6.6 2.7.10; do  
 		for ver in $pyenv_ver; do
 			if [ ! `$pyenv_exec versions|egrep "($ver\d*$)"` ]; then
-				$pyenv_exec  install $pyenv_ver 
+				PYTHON_CONFIGURE_OPTS="--enable-unicode=ucs4" $pyenv_exec  install $pyenv_ver 
 			else
 				echo "pyenv python $ver is already installed"
 			fi			
